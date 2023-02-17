@@ -1,29 +1,17 @@
 # Prediction-safroon
 
-Prediction  safroon is Crypto Prediction Market Place 
-
-
-
-
-
-
-
-
-
-
-
+Prediction safroon is Crypto Prediction Market Place
 
 ## Tech Stack
 
-
-
-
-
-
-
-## Used 
+## Used
 
 ![](https://www.gitbook.com/cdn-cgi/image/width=256,height=40,fit=contain,dpr=1.5,format=auto/https%3A%2F%2F828262926-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Me_G5lHljRT4SyKcEA9%252Flogo%252Fh0vEEm11UGmb8yrr7H18%252Flogo.png%3Falt%3Dmedia%26token%3D8e5ce850-b4cd-4670-93c9-a8ebf0077a57)
 
-
 # Our partners
+
+# Architecture
+
+# Email
+
+# Collaboration
