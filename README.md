@@ -23,7 +23,7 @@ Prediction safroon is Crypto Prediction Market Place
 ###  Our partners
 
 
-### Our Community 
+#  Our Community 
 
 - Non-Technical discussion:
     - Telegram Group
