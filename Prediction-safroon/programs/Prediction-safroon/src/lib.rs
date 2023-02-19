@@ -11,26 +11,25 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 mod prediction_contract {
 
     use super::*;
+    pub fn create_master() -> Result<()> {
+        Ok(())
 
-    pub fn create_master() -> Result<()> {}
+}
+#[derive(Account)] // Account 
 
-    #[derive(Accounts)]
-    pub struct CreateMaster<'info> {
-        // life time of the account
-        #[account( // account initilized 
-        init,
-        payer = payer,
-        space = 8 + 8,
-        seeds = [Master_SEED], // seeds 
-        bump=
-
-
-    )]
+        #[account(
+            init,
+            seeds = [Master_SEED],
+            bump = 1,
+            payer = payer,
+            space = 8 + 8
+        )]
+    
         pub master: Account<'info, Master>, // Account itself
 
         #[accout(mut)]
         pub payer: Signer<'info>,
 
-        pub system_program: Program<'info, System>, // system program
+        pub system_program: Program<'info, System> // system program
     }
 }
