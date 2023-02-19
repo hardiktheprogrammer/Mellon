@@ -1,7 +1,10 @@
+mod constants;
 mod state;
 // use crate::state::*;
+use crate::{constants::*, state::*};
 use anchor_lang::{prelude::*, system_program};
 use pyth_sdk_solana::{load_price_feed_from_account_info, PriceFeed};
+
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
@@ -18,7 +21,7 @@ mod prediction_contract {
         init,
         payer = payer,
         space = 8 + 8,
-        seeds = [], // seeds 
+        seeds = [Master_SEED], // seeds 
         bump=
 
 
