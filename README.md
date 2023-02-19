@@ -16,9 +16,9 @@ Prediction safroon is Crypto Prediction Market Place
 
 ## Developer Contribution Guide
 
-### Introduction for Contribution
+## Introduction for Contribution
 
-#### Get Started
+### Get Started
 
 ### Collaboration
 
