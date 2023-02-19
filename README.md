@@ -1,8 +1,8 @@
 # Prediction-safroon
+
 Prediction safroon is Crypto Prediction Market Place
 
 ## Overview
-
 
 ## Tech Stack
 
@@ -12,23 +12,23 @@ Prediction safroon is Crypto Prediction Market Place
 
 ## Demo
 
-
-
-
-
 ## Architecture
 
+## Developer Contribution Guide
 
-###  Collaboration
+### Introduction for Contribution
 
-###  Our partners
+#### Get Started
 
+### Collaboration
 
-#  Our Community 
+### Our partners
+
+# Our Community
 
 - Non-Technical discussion:
-    - Telegram Group
 
+  - Telegram Group
 
-- Technical discussion: 
-    - Discord Server
+- Technical discussion:
+  - Discord Server
