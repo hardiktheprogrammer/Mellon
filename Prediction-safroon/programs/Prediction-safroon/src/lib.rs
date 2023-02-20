@@ -3,7 +3,7 @@ mod state;
 // use crate::state::*;
 use crate::{constants::*, state::*};
 use anchor_lang::{prelude::*, system_program};
-use pyth_sdk_solana::{load_price_feed_from_account_info, PriceFeed};
+use pyth_sdk_solana::{load_price_feed_from_account_info};
 
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
@@ -11,25 +11,33 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 mod prediction_contract {
 
     use super::*;
-    pub fn create_master() -> Result<()> {
+    pub fn create_master(_ctx:Context<CreateMaster>) -> Result<()> {
         Ok(())
 
 }
-#[derive(Account)] // Account 
 
+// pub fn create_bat() -> Result<()> {
+
+// }
+
+// pub fn 
+#[derive(Accounts)] // Account stuct
+pub struct CreateMaster<'info> {
         #[account(
             init,
-            seeds = [Master_SEED],
-            bump = 1,
+            seeds = [MASTER_SEED],
             payer = payer,
-            space = 8 + 8
+            space = 8 + 8,
+            bump
+            
+            
         )]
     
         pub master: Account<'info, Master>, // Account itself
 
-        #[accout(mut)]
+        #[account(mut)]
         pub payer: Signer<'info>,
 
         pub system_program: Program<'info, System> // system program
-    }
+}
 }
