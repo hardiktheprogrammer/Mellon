@@ -1,5 +1,5 @@
 [features]
-seeds = false
+seeds = true
 skip-lint = false
 [programs.localnet]
 predtict_safroon = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
@@ -13,3 +13,5 @@ wallet = "C:\\Users\\user\\.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+[workspace]
+types = "Prediction-safroon/programs/Prediction-safroon/src/"
