@@ -1,8 +1,9 @@
 mod constants;
 mod state;
+mod utils;
 // use crate::state::*;
 use anchor_lang::{prelude::*, system_program};
-use crate::{constants::*, state::*};
+use crate::{constants::*, state::*,utils::*};
 use pyth_sdk_solana::load_price_feed_from_account_info;
 
 declare_id!("FKF4YPNCtJjYqwUZwxLDCQjUuPJDGE1v8syc3Hj4nK1s");
@@ -19,11 +20,18 @@ pub fn create_bet(
     amount:u64, // amount of the be4t 
     price:f64, // price of the bet
     duration:u32,// seconds
-    pyth_price_key, Pubkey
+pyth_price_key, Pubkey  // Pubkey 
+
+
+
 )  -> Result<()> {
 
-    let master = &mut ctx.accounts.master
-    let bet = &mut  ctx.accounts.bet
+
+
+
+
+    let master = &mut ctx.accounts.master;
+    let bet = &mut  ctx.accounts.bet;
 
     // Increase the Least id on Each bet Creation on the water
 
@@ -32,20 +40,43 @@ pub fn create_bet(
     bet.id = master.last_bet_id;
     bet.pyth_price_key = pyth_price_key;
     bet.amount = bet.amount;
-    bet.expiryts = get_unix_timestamp() + duration on i64; // duration of the bet 
+    bet.expiry_ ts = get_unix_timestamp() + duration on i64;   // duration of the bet 
     bet.prediction_a = BetPrediction {
-        Player:ctx.account.player.key(),
-
+        Player:ctx.accounts.player.key(), // player account name for the prediction 
+ 
         price,
+
+
+    };
+// winner 
+// Transfer the amount to the Bet PDA
+    system_program::transfer(   // transfer the amount to the bet PDA
+        CpiContext::new(
+            ctx.accounts.systems_program.to_account_info(), // info putting the player solana on the bet PDA 
+            system_program::Transfer{
+                from:ctx.accounts.player.to_account_info(),
+                to: btx.to_account_info() // 
+            },
+        ),
+
+        bet.amount,
+    )?;
+
+
+    Ok(())
+    }
+
+    pub fn enter _bet(ctx,price) -> Result<()> {
 
     }
 
 
-}
 
-}
+}       
 
-    #[derive(Accounts)] // Account stuct
+
+
+    #[derive(Accounts)] // Account struct
     pub struct CreateMaster<'info> {
         #[account(
             init,
